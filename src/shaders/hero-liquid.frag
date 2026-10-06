@@ -5,9 +5,9 @@ uniform vec2 uRes;
 uniform float uTime;
 out vec4 outColor;
 
-// Kudos Liquid Gradient: seed 3, scale .4, turbulence .4/.4/9,
-// wave frequency 2, speed 1, exposure/contrast 1.1, mouse disabled.
-// The neutral palette lets us interpolate perceptual lightness directly.
+// 흐르는 그라디언트 설정: seed 3, scale .4, turbulence .4/.4/9,
+// 물결 주기 2, 속도 1, 노출·대비 1.1, 마우스 반응 없음.
+// 무채색 팔레트라 지각 밝기를 그대로 보간한다.
 uvec3 hash3(uvec3 v) {
   v = v * 1664525u + 1013904223u;
   v.x += v.y * v.z; v.y += v.z * v.x; v.z += v.x * v.y;

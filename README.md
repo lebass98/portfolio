@@ -47,7 +47,7 @@
 ## 📂 프로젝트 구조 (Project Structure)
 
 ```text
-portfolio_framer/
+portfolio/
 ├── public/                 # 정적 리소스 (파비콘, 이미지, 비디오 등)
 ├── src/
 │   ├── assets/             # 로고 및 번들링 에셋

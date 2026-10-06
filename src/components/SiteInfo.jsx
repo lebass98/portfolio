@@ -2,7 +2,7 @@ import { YEAR, brand, footer, nav } from '../data/site'
 import { DotsArrow, TwoTone, Wordmark } from './ui'
 
 // 메뉴(밝은 톤)와 푸터(어두운 톤)가 함께 쓰는 정보 블록
-// 세로 간격은 모두 96px 단위 (Kudos 1920×1024 실측)
+// 세로 간격은 모두 96px 단위
 export default function SiteInfo({ dark, onNavigate }) {
   const strong = dark ? 'text-paper' : 'text-ink'
   const muted = dark ? 'text-mute' : 'text-sub'

@@ -51,7 +51,7 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: hidden; }
 
-/* ── 타이포그래피 (Kudos 측정값 기준, 한글 행간 보정) ── */
+/* ── 타이포그래피 (한글 행간 보정) ── */
 @utility t-h1 {
   font-size: 84px; line-height: 0.9; font-weight: 800; letter-spacing: -0.03em;
   @media (max-width: 1199px) { font-size: 64px; }
