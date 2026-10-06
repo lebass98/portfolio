@@ -288,3 +288,20 @@ html.lenis, html.lenis body { height: auto; }
 @media (prefers-reduced-motion: reduce) {
   .project-laptop-image { transition: none; }
 }
+
+
+/* SVG text를 한 줄로 렌더링해 iPad Safari에서도 중앙 정렬을 유지한다. */
+.preloader-wordmark {
+  position: relative;
+  display: block;
+  flex: none;
+  width: min(73vw, 1330px);
+  height: auto;
+  aspect-ratio: 8.8;
+}
+@media (max-width: 1199px) {
+  .preloader-wordmark { width: 82vw; }
+}
+@media (max-width: 809px) {
+  .preloader-wordmark { width: 84vw; }
+}
