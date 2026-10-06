@@ -196,3 +196,95 @@ html.lenis, html.lenis body { height: auto; }
   animation: barcode 9s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) { .barcode { animation: none; } }
+
+
+/* 프로젝트 노트북 목업 */
+.project-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 25% 30%, #494949 0%, transparent 62%),
+    linear-gradient(120deg, #363636 0%, #191919 57%, #080808 100%);
+}
+.project-stage-desk {
+  position: absolute;
+  inset: 77% 0 0;
+  border-top: 1px solid #111;
+  background: linear-gradient(115deg, #383838, #151515 55%, #060606);
+  box-shadow: 0 -1px 0 rgb(255 255 255 / 4%);
+}
+.project-laptop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(12px 24px 16px rgb(0 0 0 / 55%));
+}
+.project-laptop-lid {
+  position: relative;
+  padding: 1.8% 1.8% 3.3%;
+  border: 2px solid #777;
+  border-radius: 3.4% 3.4% 2% 2% / 5% 5% 3% 3%;
+  background: linear-gradient(115deg, #454545, #111 32%, #090909 80%, #202020);
+  box-shadow: inset 0 0 0 2px #262626, 0 0 0 1px #292929;
+}
+.project-laptop-screen {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 1.7% 1.7% 0 0 / 2.7% 2.7% 0 0;
+  background: #fff;
+}
+.project-laptop-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: object-position 3.5s ease-in-out;
+}
+.group:hover .project-laptop-image { object-position: bottom; }
+.project-laptop-notch {
+  position: absolute;
+  top: 2.4%;
+  left: 44.5%;
+  width: 11%;
+  height: 3.1%;
+  border-radius: 0 0 5px 5px;
+  background: #101010;
+}
+.project-laptop-notch i {
+  position: absolute;
+  top: 30%;
+  left: 48%;
+  width: 5%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #1b2027;
+  box-shadow: inset 0 0 2px #050505;
+}
+.project-laptop-base {
+  position: relative;
+  width: 105%;
+  height: 0;
+  padding-bottom: 2.2%;
+  margin: -0.3% 0 0 -2.5%;
+  border-radius: 0 0 6% 6% / 0 0 90% 90%;
+  background: linear-gradient(90deg, #303030, #9c9c9c 2%, #424242 12%, #727272 48%, #373737 88%, #a1a1a1 98%, #222);
+  box-shadow: inset 0 2px 2px rgb(255 255 255 / 30%), inset 0 -5px 4px rgb(0 0 0 / 80%), 0 3px 2px #080808;
+}
+.project-laptop-groove {
+  position: absolute;
+  top: 0;
+  left: 42%;
+  width: 16%;
+  height: 55%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(90deg, #414141, #838383 20%, #838383 80%, #414141);
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-laptop-image { transition: none; }
+}

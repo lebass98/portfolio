@@ -10,27 +10,27 @@ const roleText = (p) => {
   return '디자인을 맡아 진행했습니다'
 }
 
-// 어두운 배경 위 브라우저 창 안에 긴 화면 캡처를 담는다 (호버하면 아래로 스크롤)
+// 프로젝트 화면을 노트북 디스플레이 안에 담는다.
 function Shot({ p }) {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[6px] bg-[#0b0b0b]">
-      <div
-        className="absolute inset-0"
-        style={{ background: 'radial-gradient(80% 60% at 50% 35%, rgba(255,255,255,0.10), transparent 70%), linear-gradient(180deg, #1c1c1c, #070707)' }}
-      />
-      <div className="absolute left-1/2 top-1/2 w-[78%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[8px] bg-[#111] shadow-[0_30px_60px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
-        <div className="flex h-6 items-center gap-1.5 bg-[#1b1b1b] px-3">
-          <i className="size-2 rounded-full bg-white/20" />
-          <i className="size-2 rounded-full bg-white/20" />
-          <i className="size-2 rounded-full bg-white/20" />
+    <div className="project-stage">
+      <div className="project-stage-desk" aria-hidden="true" />
+      <div className="project-laptop">
+        <div className="project-laptop-lid">
+          <div className="project-laptop-screen">
+            <img
+              src={p.image}
+              alt={p.title}
+              loading="lazy"
+              className="project-laptop-image"
+            />
+          </div>
+          <span className="project-laptop-notch" aria-hidden="true">
+            <i />
+          </span>
         </div>
-        <div className="aspect-[16/10] overflow-hidden bg-white">
-          <img
-            src={p.image}
-            alt={p.title}
-            loading="lazy"
-            className="h-full w-full object-cover object-top transition-[object-position] duration-[3.5s] ease-in-out group-hover:object-bottom"
-          />
+        <div className="project-laptop-base" aria-hidden="true">
+          <span className="project-laptop-groove" />
         </div>
       </div>
     </div>
